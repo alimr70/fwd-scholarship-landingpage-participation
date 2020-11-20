@@ -1,0 +1,166 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+
+/* ---- Base Rules ---- */
+
+body {
+  background: rgb(94, 54, 106);
+  /* background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%); */
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  color: #eeeeee;
+}
+
+
+/* Typeography General*/
+
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3em;
+}
+
+@media only screen and (min-width: 35em) {
+  h1 {
+    font-size: 7em;
+  }
+}
+
+h2 {
+  border-bottom: 1px solid rgb(12, 202, 152);
+  font-family: 'Oxygen', Sans-Serif;
+  font-size: 3em;
+}
+
+p {
+  line-height: 2em;
+  letter-spacing: 1px;
+  color: #eee;
+}
+
+
+/* ---- Layout Rules ---- */
+
+main {
+  margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+  min-height: 40vh;
+  padding-top: 3em;
+}
+
+section {
+  position: relative;
+  min-height: 80vh;
+  transition: all 0.5s ease-out;
+}
+
+
+/* ---- Module Rules ---- */
+
+
+/* Navigation Styles*/
+
+.navbar__menu ul {
+  padding-left: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.navbar__menu li {
+  display: inline-block;
+}
+
+.navbar__menu .menu__link {
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #252525;
+  transition: all 0.5s ease-out;
+}
+
+.navbar__menu .menu__link:hover {
+  background: rgb(12, 202, 152);
+  color: #eee;
+  transition: ease 0.3s all;
+}
+
+
+/* Header Styles */
+
+.page__header {
+  background: #eee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+
+/* Footer Styles */
+
+.page__footer {
+  background: rgb(12, 202, 152);
+  padding: 3em;
+  color: #eee;
+}
+
+.page__footer p {
+  color: #eee;
+}
+
+
+/* ---- Theme Rules ---- */
+
+
+/* Landing Container Styles */
+
+.landing__container {
+  padding: 1em;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 35em) {
+  .landing__container {
+    max-width: 50em;
+    padding: 4em;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.skills div {
+  text-align: center;
+}
+
+.skills img {
+  max-width: 150px;
+}
+
+
+/* ---- Theme State Rules ---- */
+
+
+/* Section Active Styles */
+
+
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+
+.section-active {
+  background: rgb(12, 202, 152);
+  transition: all 0.5s ease-out;
+}

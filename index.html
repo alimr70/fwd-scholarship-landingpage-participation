@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <div class="landing__container">
+        <h1>Ali Maher</h1>
+        <h3>Hello there, <br><br> I have been learning web development since the beginning of 2020. <br><br> You might wonder why I took this scholarship? Find out why in the first section.</h3>
+      </div>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Why?">
+      <div class="landing__container">
+        <h2>Why?</h2>
+        <p>As I mentioned above, I started learning web-dev right after finishing my military service at the beginning of 2020. Although it was a tough year for a lot of people, mine was a lot different. For me, 2020 was the year of making progress. As for
+          someone who spent the four years of university figuring out and discovering himself with no material result in hand after all of that time passed. I have learned -and still learning- web development until I am comfortable working with React
+          and Redux for the Front-End and building simple APIs with Express for Back-End. But the problem that I faced was that at some point I didn't remember how to write Vanilla JavaScript. So, That's why I am participating in this scholarship. I needed
+          a refresh 😄.</p>
+      </div>
+    </section>
+    <section id="section2" data-nav="Skills">
+      <div class="landing__container">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div>
+            <h3>Core</h3>
+            <img src="img/html.png" alt="HTML">
+            <img src="img/css.png" alt="CSS">
+            <img src="img/javascript.png" alt="JavaScript">
+          </div>
+          <div>
+            <h3>Front-End</h3>
+            <img src="img/react.png" alt="React">
+            <img src="img/redux.png" alt="Redux">
+          </div>
+          <div>
+            <h3>Back-End</h3>
+            <img src="img/mongodb.png" alt="MongoDB">
+            <img src="img/express.png" alt="Express">
+            <img src="img/node.png" alt="Node">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section3" data-nav="Some Projects">
+      <div class="landing__container">
+        <h2>Some Projects</h2>
+        <h3>In my journey of learning. I loved React so much. So, here are some of my React projects:</h3>
+        <br>
+        <h4><a href="https://fluffy-cat.netlify.app/" target="_blank">Fluffy Cas Store</a></h4>
+        <p>This project was the first big project with React -after learning the basics-. I didn't involve that much in the code but, it was a big step in entering the world of React</p>
+        <br>
+        <h4><a href="https://my-first-todo-app.netlify.app/" target="_blank">The Bad Start Of A To-Do App</a></h4>
+        <p>Well, in this project, I made a lot of mistakes and learned some lessons:</p>
+        <p>
+          1. UI and UX matter a lot than I thought. <br>2. How to use React's Context API. <br>3. I needed to learn Redux.
+        </p>
+        <br>
+        <h4><a href="https://github.com/alimr70/my-redux-todo-app" target="_blank">Microsoft To-Do Clone</a></h4>
+        <p>
+          <b>This is not a finished project yet.</b> But, I learned my lessons:
+        </p>
+        <p>
+          1. For UI and UX I dicided to learn about them later and focus on the code instead by cloning my favourite to do app of Microsoft To DO. <br>2. I learned how to use React-Redux and it was awesome.
+        </p>
+        <br>
+        <h4><a href="https://my-google-login.herokuapp.com/" target="_blank">A Full Atack Google Authentication</a></h4>
+        <p>I created this project using Express and Passport for Back-End and React for the Front-End as a boilerplate for Google authentication. After several failed projects this one worked fine.
+        </p>
+      </div>
+    </section>
+    <section id="section4" data-nav="Contact Me">
+      <div class="landing__container">
+        <h2>Contact Me</h2>
+        <p>Feel free to send me a message on Facebook <a href="https://www.facebook.com/Ali.Mr70" target="_blank">here</a> or on LinkedIn <a href="https://www.linkedin.com/in/ali-maher-mohammed-47b4b4140/" target="_blank">here</a>.
+          <br> And <a href="https://github.com/alimr70" target="_blank">here</a> is my Github profile.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
