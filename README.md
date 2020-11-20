@@ -1,5 +1,5 @@
 # Landing Page Project
 
-## FWD Web Development in corporation with Udacity
+## FWD Web Development incorporation with Udacity
 
-This is my partipation of the first project.
+This project is my participation in the first project.
