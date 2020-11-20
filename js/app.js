@@ -38,24 +38,27 @@ const fragment = document.createDocumentFragment();
 for (const section of sections) {
   const newListItem = document.createElement("li");
   const newLink = document.createElement("a");
-
+  // Initialize menu link
   newLink.textContent = section.dataset.nav;
   newLink.setAttribute("href", "#" + section.id);
   newLink.setAttribute("id", section.dataset.nav);
   newLink.classList.add('menu__link');
-
+  // Create menu link
   newListItem.appendChild(newLink);
   fragment.appendChild(newListItem);
 }
 
 
 // Add class 'active' to section when near top of viewport
+
+// Detect if the top of a section is above the half of the screen
+// And the bottom if it is below half of the screen
 const whichSectionInView = () => {
   for (const section of sections) {
     const link = document.getElementById(section.dataset.nav);
     const bounding = section.getBoundingClientRect();
-    const screnYCenter = document.documentElement.clientHeight / 2;
-    if (bounding.top <= screnYCenter / 2 && bounding.bottom >= screnYCenter) {
+    const screenYCenter = document.documentElement.clientHeight / 2;
+    if (bounding.top <= screenYCenter / 2 && bounding.bottom >= screenYCenter) {
       section.classList.add("section-active");
       link.classList.add("section-active");
     } else {
